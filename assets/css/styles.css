@@ -1,0 +1,140 @@
+/* import google inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* reset default css */
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* variables */
+:root {
+  /* Ag Heading (XL) */
+  --heading-xl-font-size: 15rem;
+  --heading-xl-line-height: 15rem;
+  --heading-xl-letter-spacing: 0;
+  --heading-xl-font-weight: 800;
+  /* Ag Heading (L) */
+  --heading-L-font-size: 2.5rem;
+  --heading-L-line-height: 2.5rem;
+  --heading-L-letter-spacing: 0;
+  --heading-L-font-weight: 700;
+  /* Ag Heading (M) */
+  --heading-m-font-size: 2rem;
+  --heading-m-line-height: 2rem;
+  --heading-m-letter-spacing: 0;
+  --heading-m-font-weight: 700;
+  /* Ag Heading (s) */
+  --heading-s-font-size: 1rem;
+  --heading-s-line-height: 1.5rem;
+  --heading-s-letter-spacing: 0;
+  --heading-s-font-weight: 800;
+  /* Ag Heading (Xs) */
+  --heading-xs-font-size: 1.13rem;
+  --heading-xs-line-height: 1.5rem;
+  --heading-xs-letter-spacing: 0;
+  --heading-xs-font-weight: 800;
+  /* Ag (Body) */
+  --ag-body-font-size: 0.94rem;
+  --ag-body-line-height: 1.63rem;
+  --ag-body-letter-spacing: 0;
+  --ag-body-font-weight: 400;
+  /* Button font specifics */
+  --button-font-size: 0.88rem;
+  --button-line-height: 1.5rem;
+  --button-letter-spacing: 0.27rem;
+
+  /* colors */
+  --almost-white: #fffdfa;
+  --dark-space-blue: #00001A;
+  --gunmetal: #5E607A;
+  --light-vermillion: #F15D51;
+  --yellow: #E9AA52;
+  --silver: #C5C6CE;
+}
+
+body {
+  padding: 5.56rem 10.31rem 8.06rem 5.56rem;
+  background-color: var(--almost-white);
+}
+
+/* navigation styles */
+
+.nav > img {
+  width: 4rem;
+  height: 2.49rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links > ul {
+  display: flex;
+  gap: var(--heading-L-font-size);
+  align-items: center;
+  font-size: var(--ag-body-font-size);
+  font-weight: var(--ag-body-font-weight);
+  letter-spacing: var(--ag-body-letter-spacing);
+  line-height: var(--ag-body-line-height);
+  color: var(--gunmetal);
+
+  
+}
+
+ul>li>a:hover {
+color: var(--light-vermillion);
+}
+
+.menu-icon {
+  font-size: var(--heading-L-font-size);
+  display: none;
+  cursor: pointer;
+}
+
+
+
+
+/*media queries tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding: 2.5rem 2rem 3.5rem 2rem;   
+  }
+}
+
+
+
+
+
+/* media Queries mobile */
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 1.75rem 1rem 5rem 1rem; 
+  }
+
+  .nav > img {
+    width: 2.81rem;
+    height: 1.75rem;
+  }
+
+  .menu-icon {
+   display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links >ul{ 
+    flex-direction: column;
+    gap: var(--heading-xs-font-size) ;
+  }
+
+}
