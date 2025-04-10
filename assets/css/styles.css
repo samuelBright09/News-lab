@@ -59,7 +59,7 @@
 }
 
 body {
-  padding: 5.56rem 10.31rem 8.06rem 5.56rem;
+  padding: 5.56rem 11.45% 8.06rem 11.45%;
   background-color: var(--almost-white);
 }
 
@@ -100,29 +100,26 @@ ul > li > a:hover {
 /* top-story and new section */
 .headlines {
   display: flex;
-  gap: 1.88rem;
+  gap: 2.7%;
   margin-top: 3.44rem;
-  width: 69.38rem;
 }
 
 .main-story {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  width: 45.63rem;
+  width: 65.77%;
 }
 
-.top-story-image {
-  width: inherit;
-}
 
-.top-story-image > img {
+
+.main-story img {
   max-width: 100%;
 }
 
 .top-story-desc {
   display: flex;
-  gap: 1.88rem;
+  gap: 4.1%;
 }
 
 .top-title {
@@ -170,8 +167,7 @@ ul > li > a:hover {
 .new-stories {
   padding: 2rem 1.5rem;
   background-color: var(--dark-space-blue);
-  width: 21.88rem;
-  height: inherit;
+  width: 31.53%;
 }
 
 .new-stories h2 {
@@ -219,6 +215,71 @@ hr {
 .new-snippets .snippet:last-of-type {
   margin-bottom: 0;
 }
+
+
+/* Articles */
+.articles-container{
+  display: flex;
+  gap: 1.88rem;
+  margin-top: 4.44rem;
+  height: 8.06rem;
+}
+
+.article{
+  display: flex;
+  gap: 4.1%;
+  width: 31.53%;
+  width: 31.53%;
+}
+
+
+.a-image img {
+  max-width: 100%;
+}
+
+.a-texts{ 
+  display: flex;
+  gap: 0.56rem;
+  flex-direction: column;
+}
+
+.a-texts h2{
+  color: var(--silver);
+  font-size: var(--heading-m-font-size);
+  font-weight: var(--heading-m-font-weight);
+  letter-spacing: var(--heading-m-letter-spacing);
+  line-height: var(--heading-m-line-height);
+}
+
+.a-texts h3{
+  color: var(--dark-space-blue);
+  font-size: var(--heading-xs-font-size);
+  font-weight: var(--heading-xs-font-weight);
+  letter-spacing: var(--heading-xs-letter-spacing);
+  line-height: var(--heading-xs-line-height);
+}
+
+.a-texts h3:hover{
+  color: var(--light-vermillion);
+  cursor: pointer;
+}
+
+.a-texts p {
+  color: var(--gunmetal);
+  font-size: var(--ag-body-font-size);
+  font-weight: var(--ag-body-font-weight);
+  letter-spacing: var(--ag-body-letter-spacing);
+  line-height: var(--ag-body-line-height);
+}
+
+
+/* larger screens than the designed screen */
+@media screen and (min-width: 1080px) {
+  body{
+   padding: 4rem 7% 6.5rem 7%;
+  }
+}
+
 
 /*media queries tablets */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

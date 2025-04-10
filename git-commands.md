@@ -34,4 +34,15 @@ checkout -b headline-section
 ### Checking out branches available
 git branch
 
+### Publishing a new branch on remote repo
+git push -u origin headline-section
+
+### Rebasing to Staging
+git checkout headline-section then git rebase origin/staging
+
+### Pulling updates after rebase
+git checkout staging then git pull
+
+### History of commits
+git log
 
