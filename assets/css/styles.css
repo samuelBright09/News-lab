@@ -262,7 +262,7 @@ hr {
 }
 
 /* larger screens than the designed screen */
-@media screen and (max-width: 1325px) {
+@media only screen and (min-width: 1024px) and (max-width: 1324px) {
   body {
     padding: 4rem 7% 6.5rem 7%;
   }
