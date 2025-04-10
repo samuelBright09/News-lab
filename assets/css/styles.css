@@ -15,8 +15,8 @@
 /* variables */
 :root {
   /* Ag Heading (XL) */
-  --heading-xl-font-size: 15rem;
-  --heading-xl-line-height: 15rem;
+  --heading-xl-font-size: 3.5rem;
+  --heading-xl-line-height: 3.5rem;
   --heading-xl-letter-spacing: 0;
   --heading-xl-font-weight: 800;
   /* Ag Heading (L) */
@@ -51,11 +51,11 @@
 
   /* colors */
   --almost-white: #fffdfa;
-  --dark-space-blue: #00001A;
-  --gunmetal: #5E607A;
-  --light-vermillion: #F15D51;
-  --yellow: #E9AA52;
-  --silver: #C5C6CE;
+  --dark-space-blue: #00001a;
+  --gunmetal: #5e607a;
+  --light-vermillion: #f15d51;
+  --yellow: #e9aa52;
+  --silver: #c5c6ce;
 }
 
 body {
@@ -85,12 +85,10 @@ nav {
   letter-spacing: var(--ag-body-letter-spacing);
   line-height: var(--ag-body-line-height);
   color: var(--gunmetal);
-
-  
 }
 
-ul>li>a:hover {
-color: var(--light-vermillion);
+ul > li > a:hover {
+  color: var(--light-vermillion);
 }
 
 .menu-icon {
@@ -99,24 +97,140 @@ color: var(--light-vermillion);
   cursor: pointer;
 }
 
+/* top-story and new section */
+.headlines {
+  display: flex;
+  gap: 1.88rem;
+  margin-top: 3.44rem;
+  width: 69.38rem;
+}
 
+.main-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  width: 45.63rem;
+}
 
+.top-story-image {
+  width: inherit;
+}
 
-/*media queries tablets */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    padding: 2.5rem 2rem 3.5rem 2rem;   
-  }
+.top-story-image > img {
+  max-width: 100%;
+}
+
+.top-story-desc {
+  display: flex;
+  gap: 1.88rem;
+}
+
+.top-title {
+  width: 47.95%;
+}
+
+.top-title h1 {
+  font-size: var(--heading-xl-font-size);
+  font-weight: var(--heading-xl-font-weight);
+  letter-spacing: var(--heading-xl-letter-spacing);
+  line-height: var(--heading-xl-line-height);
+  color: var(--dark-space-blue);
+}
+
+.top-story-read {
+  width: 47.95%;
+}
+
+.top-story-read p {
+  font-size: var(--ag-body-font-size);
+  font-weight: var(--ag-body-font-weight);
+  letter-spacing: var(--ag-body-letter-spacing);
+  line-height: var(--ag-body-line-height);
+  color: var(--gunmetal);
+}
+
+.top-story-read button {
+  background-color: var(--light-vermillion);
+  border: none;
+  font-size: var(--button-font-size);
+  letter-spacing: var(--button-letter-spacing);
+  line-height: var(--button-line-height);
+  color: var(--almost-white);
+  font-weight: bold;
+  margin-top: 1.81rem;
+  padding: 0.81rem 2.19rem 0.69rem 1.94rem;
+  cursor: pointer;
+}
+
+.top-story-read button:hover {
+  background-color: var(--dark-space-blue);
+}
+
+/* new-stories */
+.new-stories {
+  padding: 2rem 1.5rem;
+  background-color: var(--dark-space-blue);
+  width: 21.88rem;
+  height: inherit;
+}
+
+.new-stories h2 {
+  font-size: var(--heading-L-font-size);
+  font-weight: var(--heading-L-font-weight);
+  letter-spacing: var(--heading-L-letter-spacing);
+  line-height: var(--heading-L-line-height);
+  color: var(--yellow);
+  margin-bottom: 0.19rem;
+}
+
+.snippet h3 {
+  font-size: var(--heading-s-font-size);
+  font-weight: var(--heading-s-font-weight);
+  letter-spacing: var(--heading-s-letter-spacing);
+  line-height: var(--heading-s-line-height);
+  color: var(--almost-white);
+  margin-bottom: 0.5rem;
+  margin-top: 1.94rem;
+  cursor: pointer;
+}
+
+.snippet h3:hover{
+color: var(--yellow);
+}
+
+hr {
+  color: #5E607A ;
 }
 
 
 
+.snippet p {
+  font-size: var(--ag-body-font-size);
+  font-weight: var(--ag-body-font-weight);
+  letter-spacing: var(--ag-body-letter-spacing);
+  line-height: var(--ag-body-line-height);
+  color: var(--silver);
+}
 
+.snippet {
+  margin-bottom: 1.81rem;
+}
+
+.new-snippets .snippet:last-of-type {
+  margin-bottom: 0;
+}
+
+/*media queries tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding: 2.5rem 2rem 3.5rem 2rem;
+  }
+}
 
 /* media Queries mobile */
 @media only screen and (max-width: 768px) {
   body {
-    padding: 1.75rem 1rem 5rem 1rem; 
+    padding: 1.75rem 1rem 5rem 1rem;
   }
 
   .nav > img {
@@ -125,16 +239,15 @@ color: var(--light-vermillion);
   }
 
   .menu-icon {
-   display: block;
+    display: block;
   }
 
   .nav-links {
     display: none;
   }
 
-  .nav-links >ul{ 
+  .nav-links > ul {
     flex-direction: column;
-    gap: var(--heading-xs-font-size) ;
+    gap: var(--heading-xs-font-size);
   }
-
 }
